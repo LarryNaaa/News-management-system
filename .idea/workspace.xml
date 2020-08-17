@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="edd49d50-a8e6-4b29-909d-24fe256106d5" name="Default Changelist" comment="" />
+    <list default="true" id="edd49d50-a8e6-4b29-909d-24fe256106d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597605113844</updated>
-      <workItem from="1597605115317" duration="1992000" />
+      <workItem from="1597605115317" duration="3309000" />
     </task>
     <servers />
   </component>
@@ -63,10 +65,10 @@
       <screen x="-1080" y="39" width="1080" height="1920" />
     </state>
     <state x="-847" y="930" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597605371018" />
-    <state x="-950" y="1143" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1597605397658">
+    <state x="-1014" y="1178" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1597607479214">
       <screen x="-1080" y="39" width="1080" height="1920" />
     </state>
-    <state x="-950" y="1143" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597605397658" />
+    <state x="-1014" y="1178" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597607479214" />
     <state width="1038" height="582" key="GridCell.Tab.0.bottom" timestamp="1597605127802">
       <screen x="-1080" y="39" width="1080" height="1920" />
     </state>
@@ -83,9 +85,9 @@
       <screen x="-1080" y="39" width="1080" height="1920" />
     </state>
     <state width="1038" height="582" key="GridCell.Tab.0.right/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597605127801" />
-    <state x="-1052" y="580" key="SettingsEditor" timestamp="1597605419416">
+    <state x="-1052" y="580" key="SettingsEditor" timestamp="1597607480854">
       <screen x="-1080" y="39" width="1080" height="1920" />
     </state>
-    <state x="-1052" y="580" key="SettingsEditor/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597605419416" />
+    <state x="-1052" y="580" key="SettingsEditor/0.0.1920.1080/-1080.39.1080.1920@-1080.39.1080.1920" timestamp="1597607480854" />
   </component>
 </project>
