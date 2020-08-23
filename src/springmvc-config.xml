@@ -18,9 +18,9 @@
 	<!-- 配置注解驱动 -->
 	<mvc:annotation-driven />
 	<!-- 配置静态资源的访问映射，此配置中的文件，将不被前端控制器拦截 -->
-	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
-	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
-	<mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/images/" mapping="/images/**" />
 	<!-- 定义视图解析器 -->
 	<bean id="viewResoler"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

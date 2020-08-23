@@ -19,4 +19,8 @@ public class CommonController {
 	public String right(){
 		return "right";
 	}
+	@RequestMapping(value="/main.action",method=RequestMethod.GET)
+	public String main(){
+		return "main";
+	}
 }

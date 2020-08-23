@@ -70,6 +70,8 @@ request.setCharacterEncoding("UTF-8");
 				<!--登录-->
 				<div class="qlogin" id="qlogin">
 					<div class="web_login" align="center">
+						<!--onsubmit事件发生在submit之后，action之前。
+						根据checkValue()函数返回的布尔值决定form表单是否继续执行-->
 						<form action="${pageContext.request.contextPath}/login.action" method="post"  onsubmit="return checkValue()">
 						<font style="color:#ff0000;font-size:16px;">${msg }</font>
 						<div style="height:10px;"></div>
@@ -85,6 +87,8 @@ request.setCharacterEncoding("UTF-8");
 								</span>
 								<input type="password" name="password" id="password" class="form-control" placeholder="密码"/>
 							</div>
+							<!--请始终为按钮规定 type 属性。
+							Internet Explorer 的默认类型是 "button"，而其他浏览器中（包括 W3C 规范）的默认值是 "submit"。-->
 							<div style="padding-left: 100px; margin-top: 20px;">
 								<button class="btn btn-primary btn-lg" style="width:150px">登录</button>
 							</div>
@@ -93,6 +97,7 @@ request.setCharacterEncoding("UTF-8");
 				</div>
 			</div>
 			<script>
+			//检查账号和密码是否为空
 			function checkValue() {
 				var str = document.getElementById("loginName").value;
 				if (str.length < 1) {
