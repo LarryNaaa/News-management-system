@@ -11,4 +11,8 @@ public interface CategoryDao {
 	public Category getCategoryById(Integer categoryId);
 	//添加新闻类别
 	public int addCategory(Category category);
+	//修改新闻类别
+	public int updateCategory(Category category);
+	//删除新闻类别
+	public int delCategory(Integer categoryId);
 }

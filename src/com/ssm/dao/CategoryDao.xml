@@ -19,4 +19,18 @@
 		#{categoryName}
 		)
 	</insert>
+	<!--修改新闻类别 -->
+	<update id="updateCategory" parameterType="Category">
+		update t_category
+		<set>
+			<if test="categoryName != null and categoryName != ''">
+				categoryName = #{categoryName}
+			</if>
+		</set>
+		where categoryId = #{categoryId}
+	</update>
+	<!--删除新闻类别 -->
+	<delete id="delCategory" parameterType="Integer">
+		delete from t_category where categoryId = #{categoryId}
+	</delete>
 </mapper>

@@ -55,6 +55,7 @@
         <tr>
             <th style="width:100px;text-align:center;">新闻类别ID</th>
             <th style="width:100px;text-align:center;">新闻类别名称</th>
+            <th style="width:200px;text-align:center;">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -63,6 +64,10 @@
                 <tr>
                     <td align="center">${category.categoryId}</td>
                     <td align="center">${category.categoryName}</td>
+                    <td align="center">
+                        <a href="${pageContext.request.contextPath}/toEditCategory.action?categoryId=${category.categoryId}">修改</a>
+                        &nbsp;|&nbsp;<a href='#' onclick="del(${category.categoryId})">删除</a>
+                    </td>
                 </tr>
             </c:forEach>
         </c:if>
@@ -77,6 +82,35 @@
         </c:if>
         </tbody>
     </table>
+    <script type="text/javascript">
+        function del(categoryId){
+            if(window.confirm("您确定要删除吗？"))
+            {
+                $.ajax({
+                    url:"${pageContext.request.contextPath }/delCategory.action",
+                    type:"post",
+                    //data表示发送的数据
+                    data:JSON.stringify({categoryId:categoryId}),
+                    // 定义发送请求的数据格式为JSON字符串
+                    contentType:"application/json;charset=UTF-8",
+                    //定义回调响应的数据格式为JSON字符串，该属性可以省略
+                    dataType:"json",
+                    //成功响应的结果
+                    success:function(data){
+                        if(data!=null){
+                            if(data.categoryId>0){
+                                alert("删除成功！");
+                                window.location.reload();
+                            }else{
+                                alert("删除失败！");
+                                window.location.reload();
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 </div>
 </body>
 </html>

@@ -1,12 +1,15 @@
 package com.ssm.web.controller;
 
 import com.ssm.po.Category;
+import com.ssm.po.User;
 import com.ssm.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -42,6 +45,40 @@ public class CategoryController {
             return "redirect:findCategoryList.action";
         }else {
             return "category/add_category";
+        }
+    }
+
+    @RequestMapping(value = "/toEditCategory.action")
+    public String toEditCategory(Integer categoryId, Model model){
+        Category category = categoryService.findCategoryById(categoryId);
+        if (category != null){
+            model.addAttribute("category", category);
+            return "category/edit_category";
+        }else {
+            return "redirect:findCategoryList.action";
+        }
+    }
+
+    @RequestMapping(value = "/editCategory.action")
+    public String editCategory(Category category, Model model){
+        int rows = categoryService.editCategory(category);
+        if(rows > 0){
+            return "redirect:findCategoryList.action";
+        }else {
+            return "category/edit_category";
+        }
+    }
+
+    @RequestMapping(value = "/delCategory.action")
+    @ResponseBody
+    public Category delCategory(@RequestBody Category category, Model model) {
+        int rows = categoryService.delCategory(category.getCategoryId());
+        if (rows>0) {
+            return category;
+        }else{
+            //此处设置userId为0，只是作为操作失败的标记用
+            category.setCategoryId(0);
+            return category;
         }
     }
 }

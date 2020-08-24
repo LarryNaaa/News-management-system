@@ -8,4 +8,6 @@ public interface CategoryService {
 	public List<Category> findCategoryList();
 	public Category findCategoryById(Integer categoryId);
 	public int addCategory(Category category);
+	public int editCategory(Category category);
+	public int delCategory(Integer categoryId);
 }
