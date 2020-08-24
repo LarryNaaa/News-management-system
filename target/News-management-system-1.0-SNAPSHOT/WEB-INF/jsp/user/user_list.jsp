@@ -20,26 +20,32 @@ request.setCharacterEncoding("UTF-8");
     <li><a href="#">用户列表</a></li>
     </ul>
     </div>    
-    <div class="rightinfo">    
-    <div class="tools">    
-    	<ul class="toolbar">
-        <li class="click"><a href="${pageContext.request.contextPath}/toAddUser.action"><span><img src="images/t01.png" /></span>添加用户</a></li>
-        </ul>
-       </div>
+    <div class="rightinfo">
+		<div class="tools">
+			<ul class="toolbar">
+				<li class="click"><a href="${pageContext.request.contextPath}/toAddUser.action"><span><img src="images/t01.png" /></span>添加用户</a></li>
+			</ul>
+		</div>
        <form action="${pageContext.request.contextPath}/findUserList.action" id="userListForm"
 			name="ff" method="post">
 			<ul class="seachform">
 				<li><label>&nbsp;&nbsp;&nbsp;&nbsp;搜索关键词:</label>
-				<input name="keywords" value="${keywords}" placeholder="这里输入姓名或登录账号" type="text" style="width: 400px;" class="scinput" /></li>
-				<li><label style="width: 60px;">角色：</label> <select
-					name="userListRoleId" id="userListRoleId" class="dfinput">
+				<input name="keywords" value="${keywords}" placeholder="这里输入姓名或登录账号"
+					   type="text" style="width: 400px;" class="scinput" /></li>
+				<li><label style="width: 60px;">角色：</label>
+					<select name="userListRoleId" id="userListRoleId" class="dfinput">
 						<option value="">--请选择--</option>
 						<c:forEach items="${roleList}" var="r">
-							<option value="${r.roleId}" <c:if test="${r.roleId eq userListRoleId }">selected="selected"</c:if>>&nbsp;&nbsp;&nbsp;&nbsp;${r.roleName }</option>
+							<option value="${r.roleId}"
+									<c:if test="${r.roleId eq userListRoleId }">
+										selected="selected"
+									</c:if>>
+								&nbsp;&nbsp;&nbsp;&nbsp;${r.roleName }
+							</option>
 						</c:forEach>
-				</select></li>
-				<li><label>&nbsp;</label><input name="" type="submit"
-					class="scbtn" value="查询" /></li>
+					</select>
+				</li>
+				<li><label>&nbsp;</label><input name="" type="submit" class="scbtn" value="查询" /></li>
 			</ul>
 		</form>
        
@@ -62,7 +68,8 @@ request.setCharacterEncoding("UTF-8");
 							<td align="center">${user.userName}</td>
 							<td align="center">${user.loginName}</td>
 							<td align="center">${user.tel}</td>
-							<td align="center"><fmt:formatDate value="${user.registerTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+							<td align="center"><fmt:formatDate value="${user.registerTime}"
+															   pattern="yyyy-MM-dd HH:mm:ss"/></td>
 							<td align="center">${user.roleName}</td>
 							<td align="center">
 							<c:if test="${user.status=='2'}" var="flag">

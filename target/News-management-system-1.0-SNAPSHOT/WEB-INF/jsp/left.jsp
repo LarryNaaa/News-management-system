@@ -49,6 +49,8 @@ $(function(){
 					<ul class="menuson">
 						<li><cite></cite><a href="${pageContext.request.contextPath}/findCategoryList.action"
 							target="rightFrame">新闻类别列表</a><i></i></li>
+						<li><cite></cite><a href="${pageContext.request.contextPath}/toAddCategory.action"
+											target="rightFrame">添加新闻类别</a><i></i></li>
 					</ul>
 				</dd>
 			</dl>

@@ -10,4 +10,13 @@
 	<select id="getCategoryById" parameterType="Integer" resultType="Category">
 		select * from t_category where categoryId=#{categoryId}
 	</select>
+	<!--添加新闻类别 -->
+	<insert id="addCategory" parameterType="Category">
+		insert into t_category(
+		categoryName
+		)
+		values (
+		#{categoryName}
+		)
+	</insert>
 </mapper>

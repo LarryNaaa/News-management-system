@@ -21,4 +21,9 @@ public class CategoryServiceImpl implements CategoryService {
 	public Category findCategoryById(Integer categoryId) {
 		return this.categoryDao.getCategoryById(categoryId);
 	}
+
+	@Override
+	public int addCategory(Category category) {
+		return this.categoryDao.addCategory(category);
+	}
 }

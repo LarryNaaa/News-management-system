@@ -9,4 +9,6 @@ public interface CategoryDao {
 	public List<Category> selectCategoryList();
 	//根据新闻类别ID查询新闻类别
 	public Category getCategoryById(Integer categoryId);
+	//添加新闻类别
+	public int addCategory(Category category);
 }

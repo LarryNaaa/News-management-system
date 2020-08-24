@@ -7,4 +7,5 @@ import com.ssm.po.Category;
 public interface CategoryService {
 	public List<Category> findCategoryList();
 	public Category findCategoryById(Integer categoryId);
+	public int addCategory(Category category);
 }
